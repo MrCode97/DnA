@@ -51,9 +51,6 @@ public class IndexedHeap <T extends Comparable<T>> {
 	}
 	
 	public void update(T original, T update) {
-		//lookup.put(update, lookup.get(original));
-		//lookup.remove(original);
-		
 		heap.set(lookup.get(update), update);
 		if(update.compareTo(original) > 0) {
 			siftUp(lookup.get(update));
