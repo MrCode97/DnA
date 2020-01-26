@@ -1,14 +1,6 @@
 
 public class Main {
 	public static void main(String args[]) {
-		MinHeap<Integer> mh = new MinHeap<Integer>();
-		mh.add(4);
-		mh.add(21);
-		mh.add(2);
-		mh.add(1);
-		mh.add(2);
-		mh.add(0);
-		System.out.println(mh.toString());
 		int[][] graph = new int[7][7];
 		for(int x = 0; x<graph.length; x++) {
 			for(int y = 0; y < graph.length; y++) {
@@ -52,14 +44,5 @@ public class Main {
 		for(int i=0; i<dist2.length;i++) {
 			System.out.println("Shortest-Path from " + (from+1) + " to " + (i+1) + " is: " + dist[i]);
 		}
-		
-		/*
-		long startTime = System.nanoTime();		
-		for(int i = 999999; i >=0; i--) {
-			minHeap.add(i);
-		}
-		long endTime = System.nanoTime();
-		System.out.println((endTime - startTime));
-		*/
 	}
 }
