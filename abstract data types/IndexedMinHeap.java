@@ -31,10 +31,6 @@ public class IndexedMinHeap<T extends Comparable<T>> extends IndexedHeap<T> {
 	
 	@Override
 	public void update(T original, T update) {
-		//lookup.put(update, lookup.get(original));
-		//lookup.remove(original);
-		//heap.add(lookup.get(update), update);
-		//heap.remove(lookup.get(update) +1);
 		heap.set(lookup.get(update), update);
 		if(update.compareTo(original) < 0) {
 			siftUp(lookup.get(update));
