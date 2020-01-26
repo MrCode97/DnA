@@ -125,25 +125,7 @@ public class MaxHeapWithPointers<T extends Comparable<T>> {
 
 		}
 	}
-	/*
-	private void siftUp(Node<T> parent) {
-		// swaps biggest node with parent if is bigger than parent
-		if((nodeIsDefined(parent.rightChild) && parent.rightChild.data.compareTo(parent.data) > 0)
-				|| parent.leftChild.data.compareTo(parent.data) > 0 ) {
-			if(nodeIsDefined(parent.rightChild) && parent.rightChild.data.compareTo(parent.leftChild.data) > 0) {
-				swap(parent, parent.rightChild);
-				// now the biggest elements is in parent so we recursively call siftDown 
-				// until reached root / or heap-property is fulfilled
-				if(parent.parent != null) siftUp(parent.parent);
-			} else {
-				swap(parent, parent.leftChild);  
-				if(parent.parent != null) siftUp(parent.parent);
-			}
-			
-		}
-		return;
-		
-	}*/
+
 	private void siftUp(Node<T> node) {
 		while(node.parent != null && node.data.compareTo(node.parent.data) > 0) {
 			swap(node.parent, node);
